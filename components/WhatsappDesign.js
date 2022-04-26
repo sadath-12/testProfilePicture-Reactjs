@@ -1,9 +1,9 @@
 import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import whatsapp1 from "../src/assets/img/whatsapp-1.png";
-import whatsapp2 from "../src/assets/img/whatsapp-2.png";
-import whatsapp3 from "../src/assets/img/whatsapp-3.png";
-import whatsapp4 from "../src/assets/img/whatsapp-4.png";
+import whatsapp1 from "../public/img/whatsapp-1.png";
+import whatsapp2 from "../public/img/whatsapp-2.png";
+import whatsapp3 from "../public/img/whatsapp-3.png";
+import whatsapp4 from "../public/img/whatsapp-4.png";
 
 const WhatsappDesign = ({ finalCroppedImage }) => {
   return (

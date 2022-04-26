@@ -1,6 +1,6 @@
 import React from "react";
 import AOS from 'aos'
-import "../src/assets/css/main.css";
+import "../public/css/main.css";
 const Contact = () => {
   AOS.init();
   return (
@@ -13,7 +13,7 @@ const Contact = () => {
               Do you have a question? Or are you interested in advertising? Let
               us know..
             </h1>
-            <img src={require("../src/assets/img/tpp2.png")} />
+            <img src={require("../public/img/tpp2.png")} />
           </div>
         </div>
         <div className="col-md-6">

@@ -9,7 +9,7 @@ function Design({ finalCroppedImage }) {
           <div className="col-lg-5 insta_profile overflow-scroll">
             <img
               className=""
-              src={require("../src/assets/img/inst.png")}
+              src={require("../public/img/inst.png")}
               alt="insta-base-img"
             />
             {finalCroppedImage !== "" && finalCroppedImage != null && (
@@ -34,7 +34,7 @@ function Design({ finalCroppedImage }) {
           <div className="col-lg-5 whatsapp_profile overflow-scroll">
             <img
               className=" "
-              src={require("../src/assets/img/whatsapp.jpeg")}
+              src={require("../public/img/whatsapp.jpeg")}
               alt="whatsapp-base-img"
             />
             {finalCroppedImage !== "" && finalCroppedImage != null && (
