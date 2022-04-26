@@ -1,8 +1,12 @@
 import AOS from 'aos'
-import '../public/css/main.css'
+import {useEffect} from 'react'
 
 const Contact = () => {
-  AOS.init()
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <div id="contact_section" className="container mb-5 p-4" data-aos="slide-right" data-aos-duration="1500"
          data-aos-once="true">

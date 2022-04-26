@@ -1,8 +1,13 @@
+import {useEffect} from 'react'
 import AOS from 'aos'
 import {Navbar, Banner, UploadImg, Contact, Footer} from '../components'
 
 export default function Home() {
-  AOS.init()
+
+  // Lazy load AOS
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   return (
     <>

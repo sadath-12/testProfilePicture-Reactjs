@@ -1,7 +1,12 @@
+import {useEffect} from 'react'
 import AOS from 'aos'
 
 function Banner() {
-  AOS.init()
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <>
       <div id="home" className="container mt-5 p-4 mb-5">

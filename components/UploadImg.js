@@ -104,18 +104,18 @@ const UploadImg = () => {
                 ad space
               </div>
             </div>
-            <Dropzone onDrop={handleDrop} maxFiles={1} accept="image/*">
-              {({getRootProps, getInputProps}) => (
-                <div {...getRootProps({className: 'dropzone'})}>
-                  <input {...getInputProps()} />
-                  <PlusIcon className="upload-icon"/>
+            {/*<Dropzone onDrop={handleDrop} maxFiles={1} accept="image/*">*/}
+            {/*  {({getRootProps, getInputProps}) => (*/}
+            {/*    <div {...getRootProps({className: 'dropzone'})}>*/}
+            {/*      <input {...getInputProps()} />*/}
+            {/*      <PlusIcon className="upload-icon"/>*/}
 
-                  <small>
-                    upload or drag <br/> or refresh to try again
-                  </small>
-                </div>
-              )}
-            </Dropzone>
+            {/*      <small>*/}
+            {/*        upload or drag <br/> or refresh to try again*/}
+            {/*      </small>*/}
+            {/*    </div>*/}
+            {/*  )}*/}
+            {/*</Dropzone>*/}
 
             <div
               ref={cropSection}
