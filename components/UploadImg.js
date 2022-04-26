@@ -108,7 +108,7 @@ const UploadImg = () => {
              {({getRootProps, getInputProps}) => (
                 <div {...getRootProps({className: 'dropzone'})}>
                   <input {...getInputProps()} />
-                   <PlusIcon className="upload-icon"/>
+                   {/* <PlusIcon className="upload-icon"/> */}
 
                    <small>
                      upload or drag <br/> or refresh to try again
