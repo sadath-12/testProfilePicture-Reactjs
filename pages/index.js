@@ -1,22 +1,18 @@
 import AOS from 'aos'
-import Navbar from '../components/Navbar'
-import Banner from '../components/Banner'
-import UploadImg from '../components/UploadImg'
-import Contact from '../components/Contact'
-import Footer from '../components/Footer'
+import {Navbar, Banner, UploadImg, Contact, Footer} from '../components'
 
 export default function Home() {
   AOS.init()
 
   return (
     <>
-      <Navbar />
-      <Banner />
-      <UploadImg />
+      <Navbar/>
+      <Banner/>
+      <UploadImg/>
 
       <div className="combine_section mt-5 pt-5">
-        <Contact />
-        <Footer />
+        <Contact/>
+        <Footer/>
       </div>
     </>
   )
