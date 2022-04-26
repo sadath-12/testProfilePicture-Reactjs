@@ -1,22 +1,21 @@
-import React from "react";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import tiktok1 from "../public/img/tiktok-1.png";
-import tiktok2 from "../public/img/tiktok-2.png";
+import {TransitionGroup, CSSTransition} from 'react-transition-group'
+import tiktok1 from '../public/img/tiktok-1.png'
+import tiktok2 from '../public/img/tiktok-2.png'
 
-const TiktokDesign = ({ finalCroppedImage }) => {
+const TiktokDesign = ({finalCroppedImage}) => {
   return (
     <TransitionGroup>
       <div className="p-0  position-relative">
         <div className="row">
-          <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-center align-items-center my-4 tiktok-design">
+          <div
+            className="col-lg-6 col-md-12 d-flex flex-column justify-content-center align-items-center my-4 tiktok-design">
             <div
               className="position-relative m-0  align-items-center"
-              style={{ width: "max-content" }}
-            >
-              <img src={tiktok1} className="tiktok_design-base1" alt="" />
-              {finalCroppedImage != null && finalCroppedImage !== "" && (
+              style={{width: 'max-content'}}>
+              <img src={tiktok1} className="tiktok_design-base1" alt=""/>
+              {finalCroppedImage != null && finalCroppedImage !== '' && (
                 <CSSTransition
-                  in={finalCroppedImage != null && finalCroppedImage !== ""}
+                  in={finalCroppedImage != null && finalCroppedImage !== ''}
                   timeout={700}
                   classNames="fade"
                 >
@@ -29,15 +28,16 @@ const TiktokDesign = ({ finalCroppedImage }) => {
               )}
             </div>
           </div>
-          <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-center align-items-center my-4 tiktok-design">
+          <div
+            className="col-lg-6 col-md-12 d-flex flex-column justify-content-center align-items-center my-4 tiktok-design">
             <div
               className="position-relative m-0  align-items-center"
-              style={{ width: "max-content" }}
+              style={{width: 'max-content'}}
             >
-              <img src={tiktok2} className="tiktok_design-base2" alt="" />
-              {finalCroppedImage != null && finalCroppedImage !== "" && (
+              <img src={tiktok2} className="tiktok_design-base2" alt=""/>
+              {finalCroppedImage != null && finalCroppedImage !== '' && (
                 <CSSTransition
-                  in={finalCroppedImage != null && finalCroppedImage !== ""}
+                  in={finalCroppedImage != null && finalCroppedImage !== ''}
                   timeout={700}
                   classNames="fade"
                 >
@@ -53,7 +53,7 @@ const TiktokDesign = ({ finalCroppedImage }) => {
         </div>
       </div>
     </TransitionGroup>
-  );
-};
+  )
+}
 
-export default TiktokDesign;
+export default TiktokDesign

@@ -1,65 +1,65 @@
-import React, { useState, useRef, useEffect } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import Dropzone from "react-dropzone";
-import InstagramDesign from "./InstagramDesign";
-import ReactCrop from "react-image-crop";
-import { ReactComponent as PlusIcon } from "../public/icons/plus-circle.svg";
-import "react-image-crop/dist/ReactCrop.css";
-import FacebookDesign from "./FacebookDesign";
-import WhatsappDesign from "./WhatsappDesign";
-import TiktokDesign from "./TiktokDesign";
+import {useState, useRef, useEffect} from 'react'
+import {CSSTransition, TransitionGroup} from 'react-transition-group'
+import Dropzone from 'react-dropzone'
+import InstagramDesign from './InstagramDesign'
+import ReactCrop from 'react-image-crop'
+import {ReactComponent as PlusIcon} from '../public/icons/plus-circle.svg'
+import 'react-image-crop/dist/ReactCrop.css'
+import FacebookDesign from './FacebookDesign'
+import WhatsappDesign from './WhatsappDesign'
+import TiktokDesign from './TiktokDesign'
 
 const UploadImg = () => {
-  const [tempImage, setTempImage] = useState(null);
-  const [cropImage, setcropImage] = useState(null);
-  const [finalCroppedImage, setFinalCroppedImage] = useState("");
-  const [activeIndex, setActiveIndex] = useState(0);
-  const cropSection = useRef(null);
-  const displaySection = useRef(null);
+  const [tempImage, setTempImage] = useState(null)
+  const [cropImage, setcropImage] = useState(null)
+  const [finalCroppedImage, setFinalCroppedImage] = useState('')
+  const [activeIndex, setActiveIndex] = useState(0)
+  const cropSection = useRef(null)
+  const displaySection = useRef(null)
 
   const [crop, setCrop] = useState({
-    aspect: 1 / 1,
-    unit: "px",
+    aspect: 1,
+    unit: 'px',
     x: 50,
     y: 0,
     height: 200,
     width: 200,
-  });
+  })
 
   const handleDrop = (acceptedFiles) => {
-    const file = acceptedFiles[0];
-    setTempImage(window.URL.createObjectURL(file));
-    cropSection?.current.scrollIntoView();
-  };
+    const file = acceptedFiles[0]
+    setTempImage(window.URL.createObjectURL(file))
+    cropSection?.current.scrollIntoView()
+  }
 
   function getCroppedImg() {
-    setFinalCroppedImage(null);
+    setFinalCroppedImage(null)
   }
 
   const changeActiveIndex = (idx) => {
-    setActiveIndex(idx);
-  };
+    setActiveIndex(idx)
+  }
 
   useEffect(() => {
     if (cropImage == null) {
-      return;
+      return
     }
-    if (finalCroppedImage === "") {
-      return;
+    if (finalCroppedImage === '') {
+      return
     }
-    const canvas = document.createElement("canvas");
-    const scaleX = cropImage.naturalWidth / cropImage.width;
-    const scaleY = cropImage.naturalHeight / cropImage.height;
-    canvas.width = crop.width;
-    canvas.height = crop.height;
-    const ctx = canvas.getContext("2d");
+    const canvas = document.createElement('canvas')
+    const scaleX = cropImage.naturalWidth / cropImage.width
+    const scaleY = cropImage.naturalHeight / cropImage.height
+    canvas.width = crop.width
+    canvas.height = crop.height
+    const ctx = canvas.getContext('2d')
 
     // New lines to be added
-    const pixelRatio = window.devicePixelRatio;
-    canvas.width = crop.width * pixelRatio;
-    canvas.height = crop.height * pixelRatio;
-    ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
-    ctx.imageSmoothingQuality = "high";
+    const pixelRatio = window.devicePixelRatio
+    canvas.width = crop.width * pixelRatio
+    canvas.height = crop.height * pixelRatio
+    ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0)
+    ctx.imageSmoothingQuality = 'high'
 
     ctx.drawImage(
       cropImage,
@@ -70,12 +70,12 @@ const UploadImg = () => {
       0,
       0,
       crop.width,
-      crop.height
-    );
+      crop.height,
+    )
 
-    const base64Image = canvas.toDataURL("image/png");
-    setFinalCroppedImage(base64Image);
-  }, [finalCroppedImage, cropImage]);
+    const base64Image = canvas.toDataURL('image/png')
+    setFinalCroppedImage(base64Image)
+  }, [finalCroppedImage, cropImage])
   return (
     <section id="img-upload" className="upload_section">
       <div className="container mb-5 p-4">
@@ -99,18 +99,19 @@ const UploadImg = () => {
                   make sure to hit the button below.
                 </p>
               </div>
-              <div className="upload_sec_add fw-bolder col-lg-8 col-md-12 d-flex justify-content-center align-items-center text-primary">
+              <div
+                className="upload_sec_add fw-bolder col-lg-8 col-md-12 d-flex justify-content-center align-items-center text-primary">
                 ad space
               </div>
             </div>
             <Dropzone onDrop={handleDrop} maxFiles={1} accept="image/*">
-              {({ getRootProps, getInputProps }) => (
-                <div {...getRootProps({ className: "dropzone" })}>
+              {({getRootProps, getInputProps}) => (
+                <div {...getRootProps({className: 'dropzone'})}>
                   <input {...getInputProps()} />
-                  <PlusIcon className="upload-icon" />
+                  <PlusIcon className="upload-icon"/>
 
                   <small>
-                    upload or drag <br /> or refresh to try again
+                    upload or drag <br/> or refresh to try again
                   </small>
                 </div>
               )}
@@ -149,7 +150,7 @@ const UploadImg = () => {
               <div className="social_links col-xl-12 col-lg-4 mb-xl-3">
                 <div
                   className={`social_links-item ${
-                    activeIndex === 0 ? "fw-bolder" : ""
+                    activeIndex === 0 ? 'fw-bolder' : ''
                   }`}
                   onClick={() => changeActiveIndex(0)}
                 >
@@ -157,7 +158,7 @@ const UploadImg = () => {
                 </div>
                 <div
                   className={`social_links-item ${
-                    activeIndex === 1 ? "fw-bolder" : ""
+                    activeIndex === 1 ? 'fw-bolder' : ''
                   }`}
                   onClick={() => changeActiveIndex(1)}
                 >
@@ -165,7 +166,7 @@ const UploadImg = () => {
                 </div>
                 <div
                   className={`social_links-item ${
-                    activeIndex === 2 ? "fw-bolder" : ""
+                    activeIndex === 2 ? 'fw-bolder' : ''
                   }`}
                   onClick={() => changeActiveIndex(2)}
                 >
@@ -173,7 +174,7 @@ const UploadImg = () => {
                 </div>
                 <div
                   className={`social_links-item ${
-                    activeIndex === 3 ? "fw-bolder" : ""
+                    activeIndex === 3 ? 'fw-bolder' : ''
                   }`}
                   onClick={() => changeActiveIndex(3)}
                 >
@@ -198,7 +199,7 @@ const UploadImg = () => {
                   timeout={700}
                   classNames="fade"
                 >
-                  <InstagramDesign finalCroppedImage={finalCroppedImage} />
+                  <InstagramDesign finalCroppedImage={finalCroppedImage}/>
                 </CSSTransition>
               )}
               {activeIndex === 1 && (
@@ -207,7 +208,7 @@ const UploadImg = () => {
                   timeout={700}
                   classNames="fade"
                 >
-                  <FacebookDesign finalCroppedImage={finalCroppedImage} />
+                  <FacebookDesign finalCroppedImage={finalCroppedImage}/>
                 </CSSTransition>
               )}
               {activeIndex === 2 && (
@@ -216,7 +217,7 @@ const UploadImg = () => {
                   timeout={700}
                   classNames="fade"
                 >
-                  <WhatsappDesign finalCroppedImage={finalCroppedImage} />
+                  <WhatsappDesign finalCroppedImage={finalCroppedImage}/>
                 </CSSTransition>
               )}
               {activeIndex === 3 && (
@@ -225,7 +226,7 @@ const UploadImg = () => {
                   timeout={700}
                   classNames="fade"
                 >
-                  <TiktokDesign finalCroppedImage={finalCroppedImage} />
+                  <TiktokDesign finalCroppedImage={finalCroppedImage}/>
                 </CSSTransition>
               )}
             </TransitionGroup>
@@ -243,6 +244,6 @@ const UploadImg = () => {
         </div>
       </div>
     </section>
-  );
-};
-export default UploadImg;
+  )
+}
+export default UploadImg

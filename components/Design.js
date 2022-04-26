@@ -1,28 +1,22 @@
-import React from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import {CSSTransition, TransitionGroup} from 'react-transition-group'
 
-function Design({ finalCroppedImage }) {
+function Design({finalCroppedImage}) {
   return (
     <TransitionGroup>
       <div className="container mb-5 social_section">
         <div className="row h-100">
           <div className="col-lg-5 insta_profile overflow-scroll">
-            <img
-              className=""
-              src={require("../public/img/inst.png")}
-              alt="insta-base-img"
-            />
-            {finalCroppedImage !== "" && finalCroppedImage != null && (
-              <CSSTransition
-                in={finalCroppedImage !== "" && finalCroppedImage != null}
-                timeout={1000}
-                classNames="fade"
-              >
-                <img
-                  className="profile"
-                  src={finalCroppedImage}
-                  alt=""
-                  onError={(e) => (e.target.style.display = "none")}
+            <img className=""
+                 src={require('../public/img/inst.png')}
+                 alt="insta-base-img"/>
+            {finalCroppedImage !== '' && finalCroppedImage != null && (
+              <CSSTransition in={finalCroppedImage !== '' && finalCroppedImage != null}
+                             timeout={1000}
+                             classNames="fade">
+                <img className="profile"
+                     src={finalCroppedImage}
+                     alt=""
+                     onError={(e) => (e.target.style.display = 'none')}
                 />
               </CSSTransition>
             )}
@@ -32,37 +26,27 @@ function Design({ finalCroppedImage }) {
             )} */}
           </div>
           <div className="col-lg-5 whatsapp_profile overflow-scroll">
-            <img
-              className=" "
-              src={require("../public/img/whatsapp.jpeg")}
-              alt="whatsapp-base-img"
-            />
-            {finalCroppedImage !== "" && finalCroppedImage != null && (
-              <CSSTransition
-                in={finalCroppedImage !== "" && finalCroppedImage != null}
-                timeout={1000}
-                classNames="fade"
-              >
-                <img
-                  className="profile2"
-                  src={finalCroppedImage}
-                  alt=""
-                  onError={(e) => (e.target.style.display = "none")}
-                />
+            <img className=""
+                 src={require('../public/img/whatsapp.jpeg')}
+                 alt="whatsapp-base-img"/>
+            {finalCroppedImage !== '' && finalCroppedImage != null && (
+              <CSSTransition in={finalCroppedImage !== '' && finalCroppedImage != null}
+                             timeout={1000}
+                             classNames="fade">
+                <img className="profile2"
+                     src={finalCroppedImage}
+                     alt=""
+                     onError={(e) => (e.target.style.display = 'none')}/>
               </CSSTransition>
             )}
-            {finalCroppedImage !== "" && finalCroppedImage != null && (
-              <CSSTransition
-                in={finalCroppedImage !== "" && finalCroppedImage != null}
-                timeout={1000}
-                classNames="fade"
-              >
-                <img
-                  className="profile3"
-                  src={finalCroppedImage}
-                  alt=""
-                  onError={(e) => (e.target.style.display = "none")}
-                />
+            {finalCroppedImage !== '' && finalCroppedImage != null && (
+              <CSSTransition in={finalCroppedImage !== '' && finalCroppedImage != null}
+                             timeout={1000}
+                             classNames="fade">
+                <img className="profile3"
+                     src={finalCroppedImage}
+                     alt=""
+                     onError={(e) => (e.target.style.display = 'none')}/>
               </CSSTransition>
             )}
 
@@ -86,7 +70,7 @@ function Design({ finalCroppedImage }) {
         </div> */}
       </div>
     </TransitionGroup>
-  );
+  )
 }
 
-export default Design;
+export default Design

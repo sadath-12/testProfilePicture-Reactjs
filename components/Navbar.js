@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react";
+import {useState, useEffect} from 'react'
 
 function Navbar() {
-  const [showTopBtn, setShowTopBtn] = useState(false);
+  const [showTopBtn, setShowTopBtn] = useState(false)
 
   const goToTop = () => {
     window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-    });
-};
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 400) {
-        setShowTopBtn(true);
+        setShowTopBtn(true)
       } else {
-        setShowTopBtn(false);
+        setShowTopBtn(false)
       }
-    });
-   
-  }, []);
+    })
+
+  }, [])
 
   return (
     <>
@@ -27,7 +27,7 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-light ">
           <div className="container-fluid">
             <a className="navbar-brand" href="#home">
-            testprofilepicture
+              testprofilepicture
             </a>
             <button
               className="navbar-toggler"
@@ -38,7 +38,7 @@ function Navbar() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"/>
             </button>
             <div
               className="collapse navbar-collapse justify-content-end"
@@ -46,11 +46,9 @@ function Navbar() {
             >
               <ul className="navbar-nav  mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a
-                    className="nav-link active"
-                    aria-current="page"
-                    href="#img-upload"
-                  >
+                  <a className="nav-link active"
+                     aria-current="page"
+                     href="#img-upload">
                     Try The Tool
                   </a>
                 </li>
@@ -74,12 +72,12 @@ function Navbar() {
         </nav>
         {showTopBtn && (
           <button onClick={goToTop} className="scroll-to-top-btn btn btn-primary rounded-circle">
-            <i className="fa fa-chevron-up"></i>
+            <i className="fa fa-chevron-up"/>
           </button>
         )}
       </div>
     </>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
