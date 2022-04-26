@@ -1,7 +1,7 @@
 import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import tiktok1 from "../assets/img/tiktok-1.png";
-import tiktok2 from "../assets/img/tiktok-2.png";
+import tiktok1 from "../src/assets/img/tiktok-1.png";
+import tiktok2 from "../src/assets/img/tiktok-2.png";
 
 const TiktokDesign = ({ finalCroppedImage }) => {
   return (

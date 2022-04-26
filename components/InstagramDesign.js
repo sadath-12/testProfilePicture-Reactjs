@@ -1,10 +1,10 @@
 import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import insta1 from "../assets/img/instagram-1.png";
-import insta2 from "../assets/img/instagram-2.png";
-import insta3 from "../assets/img/instagram-3.png";
-import insta4 from "../assets/img/instagram-4.png";
-import insta5 from "../assets/img/instagram-5.png";
+import insta1 from "../src/assets/img/instagram-1.png";
+import insta2 from "../src/assets/img/instagram-2.png";
+import insta3 from "../src/assets/img/instagram-3.png";
+import insta4 from "../src/assets/img/instagram-4.png";
+import insta5 from "../src/assets/img/instagram-5.png";
 
 const InstagramDesign = ({ finalCroppedImage }) => {
   return (

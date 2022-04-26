@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Banner from "./components/Banner";
-import UploadImg from "./components/UploadImg";
+import Navbar from "../components/Navbar";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import Banner from "../components/Banner";
+import UploadImg from "../components/UploadImg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

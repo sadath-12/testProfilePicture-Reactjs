@@ -15,7 +15,7 @@ function Banner() {
           >
             <img
               className="banner_img mb-5"
-              src={require("../assets/img/tpp1.png")}
+              src={require("../src/assets/img/tpp1.png")}
               alt="image"
             />
           </div>

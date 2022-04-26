@@ -1,9 +1,9 @@
 import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import fb1 from "../assets/img/FB-1.png";
-import fb2 from "../assets/img/FB-2.png";
-import fb3 from "../assets/img/FB-3.png";
-import fb4 from "../assets/img/FB-4.png";
+import fb1 from "../src/assets/img/FB-1.png";
+import fb2 from "../src/assets/img/FB-2.png";
+import fb3 from "../src/assets/img/FB-3.png";
+import fb4 from "../src/assets/img/FB-4.png";
 
 const FacebookDesign = ({ finalCroppedImage }) => {
   return (

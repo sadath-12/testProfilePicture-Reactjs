@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Dropzone from "react-dropzone";
 import InstagramDesign from "./InstagramDesign";
 import ReactCrop from "react-image-crop";
-import { ReactComponent as PlusIcon } from "../assets/icons/plus-circle.svg";
+import { ReactComponent as PlusIcon } from "../src/assets/icons/plus-circle.svg";
 import "react-image-crop/dist/ReactCrop.css";
 import FacebookDesign from "./FacebookDesign";
 import WhatsappDesign from "./WhatsappDesign";
